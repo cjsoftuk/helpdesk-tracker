@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.abspath('db.sqlite'),
+        'NAME': os.path.join(os.path.dirname(__file__), 'db.sqlite'),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -80,7 +80,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.abspath('templates')
+    os.path.join(os.path.dirname(__file__), "templates")
 )
 
 INSTALLED_APPS = (
